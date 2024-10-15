@@ -35,3 +35,7 @@ This repository contains notes and files for my revision on the following topics
    ```bash
    git clone https://github.com/Cohort-3-Works/week-10-part-1.git
    ```
+
+## Notion docs 
+
+https://petal-estimate-4e9.notion.site/React-Part-1-1177dfd1073580069172fc54e33929c0
