@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { UseEffect } from "./UseEffect";
-import PropTypes from "prop-types";
+import { Card } from "./Card";
 
 function App() {
   return (
@@ -41,26 +41,5 @@ function Class11Program() {
 function Class12Program() {
   return <div>NEET programs for Class 12th</div>;
 }
-
-// creating a card component for understanding children
-
-const Card = ({ children }) => {
-  return (
-    <div
-      style={{
-        padding: 10,
-        margin: 10,
-        backgroundColor: "#b2babb",
-        borderRadius: 10,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-Card.propTypes = {
-  children: PropTypes.node,
-};
 
 export default App;
