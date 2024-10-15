@@ -1,11 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { UseEffect } from "./UseEffect";
+import PropTypes from "prop-types";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Card>hi there this is my app</Card>
+        <Card>
+          <UseEffect />
+        </Card>
         <Link to="/">Allen</Link>|
         <Link to="/neet/online-coaching-class-11">Class 11</Link>|
         <Link to="/neet/online-coaching-class-12">Class 12</Link>
@@ -52,6 +57,10 @@ const Card = ({ children }) => {
       {children}
     </div>
   );
+};
+
+Card.propTypes = {
+  children: PropTypes.node,
 };
 
 export default App;
