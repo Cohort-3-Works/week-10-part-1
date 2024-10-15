@@ -2,6 +2,7 @@
 
 import PropTypes from "prop-types";
 import React from "react";
+import { Card } from "./Card";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,7 +20,13 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
+      return (
+        <div>
+          <Card>
+            <h1>Something went wrong</h1>
+          </Card>
+        </div>
+      );
     }
 
     return this.props.children;
