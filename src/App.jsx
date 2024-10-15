@@ -2,12 +2,17 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { UseEffect } from "./UseEffect";
 import { Card } from "./Card";
+import ErrorBoundary from "./Error-boundary";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Card>hi there this is my app</Card>
+        <ErrorBoundary>
+          <Card1></Card1>
+        </ErrorBoundary>
+        <Card2></Card2>
         <Card>
           <UseEffect />
         </Card>
@@ -26,6 +31,24 @@ function App() {
           <Route path="/" element={<Landing />} />
         </Routes>
       </BrowserRouter>
+    </div>
+  );
+}
+
+function Card1() {
+  throw new Error("Error while rendering"); // this line causes the whole website to crash
+
+  return (
+    <div>
+      <Card>Hi there from card 1</Card>
+    </div>
+  );
+}
+
+function Card2() {
+  return (
+    <div>
+      <Card>Hi there from card 2</Card>
     </div>
   );
 }
